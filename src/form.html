@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>SmileShop</title>
+</head>
+<body class="bg-gray-100">
+    
+<nav class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+        <!-- Logo -->
+        <div class="flex space-x-4">
+        <a href="#" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+            <svg class="h-6 w-6 mr-2 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="font-bold">SmileShop</span>
+        </a>
+        </div>
+
+        <!-- Menu principal -->
+        <div class="hidden md:flex items-center space-x-1">
+            <a href="./Index.html" class="py-5 px-3 text-gray-700 hover:text-gray-900">Accueil</a>
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Électronique</a>
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Électroménager</a>
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Promotions</a>
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Contact</a>
+        </div>
+
+        <!-- Boutons de connexion et panier -->
+        <div class="hidden md:flex items-center space-x-3">
+        <a href="#" class="py-2 px-3 bg-blue-500 text-white rounded hover:bg-blue-600">Connexion</a>
+        <a href="#" class="py-2 px-3 bg-green-500 text-white rounded hover:bg-green-600">
+            Panier (0)
+        </a>
+        </div>
+
+        <!-- Bouton mobile -->
+        <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button" class="mobile-menu-button p-2 focus:outline-none">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden md:hidden">
+    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Accueil</a>
+    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Électronique</a>
+    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Électroménager</a>
+    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Promotions</a>
+    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+    <a href="#" class="block py-2 px-4 text-sm bg-blue-500 text-white">Connexion</a>
+    <a href="#" class="block py-2 px-4 text-sm bg-green-500 text-white">Panier (0)</a>
+    </div>
+</nav>
+
+    <!-- Formulaire d'Inscription -->
+    <section class="container mx-auto py-12 px-4">
+        <div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="px-6 py-8">
+            <h2 class="text-3xl font-bold text-center mb-6">Inscription</h2>
+            <form>
+            <!-- Nom et Prénom -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                <label for="nom" class="block text-sm font-medium text-gray-700">Nom</label>
+                <input type="text" id="nom" name="nom" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
+                </div>
+                <div>
+                <label for="prenom" class="block text-sm font-medium text-gray-700">Prénom</label>
+                <input type="text" id="prenom" name="prenom" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
+                </div>
+            </div>
+
+            <!-- Date de Naissance -->
+            <div class="mt-6">
+                <label for="date_naissance" class="block text-sm font-medium text-gray-700">Date de Naissance</label>
+                <input type="date" id="date_naissance" name="date_naissance" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
+            </div>
+
+            <!-- Adresse E-mail -->
+            <div class="mt-6">
+                <label for="email" class="block text-sm font-medium text-gray-700">Adresse E-mail</label>
+                <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
+            </div>
+
+            <!-- Numéro de Téléphone -->
+            <div class="mt-6">
+                <label for="telephone" class="block text-sm font-medium text-gray-700">Numéro de Téléphone</label>
+                <input type="tel" id="telephone" name="telephone" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
+            </div>
+
+            <!-- Mot de Passe -->
+            <div class="mt-6">
+                <label for="mot_de_passe" class="block text-sm font-medium text-gray-700">Mot de Passe</label>
+                <input type="password" id="mot_de_passe" name="mot_de_passe" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
+            </div>
+
+            <!-- Bouton d'Inscription -->
+            <div class="mt-6">
+                <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                S'inscrire
+                </button>
+            </div>
+            </form>
+
+            <!-- Lien pour les utilisateurs ayant déjà un compte -->
+            <div class="mt-6 text-center">
+            <p class="text-sm text-gray-600">Vous avez déjà un compte ?</p>
+            <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold">Connectez-vous ici</a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer (déjà fourni précédemment) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <!-- Insérez ici le code du footer fourni précédemment -->
+    </footer>
+    </body>
+</html>
